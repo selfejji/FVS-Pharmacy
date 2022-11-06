@@ -1,7 +1,7 @@
 # The FVS ICS
 
-FVS ICS is an inventory control system designed to efficiently model day to day operations of FVS Pharmacy stores.
-Before the ICS, all FVS Pharmacys had inefficient database structures that do not properly model the operations of the store.
+FVS ICS is an inventory control system designed to efficiently model day to day operations of FVS Pharmacy stores.<br>
+Before the ICS, all FVS Pharmacys had inefficient database structures that do not properly model the operations of the store.<br>
 It is the purpose of this database system to provide an efficient, fast, and practical model for individual FVS Pharamcys.
 
 **Visit A Section**
@@ -20,8 +20,8 @@ Attached is the ER Diagram for our ICS
 
 **PostgreSQL**
 
-The primary language used to create the database is **[PostgreSQL](https://www.postgresql.org/)**
-PostgreSQL is an open-source relational database management system that supports both SQL and JSON querying.
+The primary language used to create the database is **[PostgreSQL](https://www.postgresql.org/)**<br>
+PostgreSQL is an open-source relational database management system that supports both SQL and JSON querying.<br>
 Below is is snippet on how to create a table with PostgreSQL
 
 ```SQL
@@ -39,8 +39,8 @@ status BOOLEAN NOT NULL
 
 **pgAdmin 4**
 
-The management tool used for the database is **[pgAdmin](https://www.pgadmin.org/)**
-pgAdmin 4 is a graphical user interface (GUI) management tool for postgreSQL databases.
+The management tool used for the database is **[pgAdmin](https://www.pgadmin.org/)**<br>
+pgAdmin 4 is a graphical user interface (GUI) management tool for postgreSQL databases.<br>
 Below is a snipper of what the pgAdmin dashboard looks like 
 
 ![](images/pgAdmin.png?raw=true)

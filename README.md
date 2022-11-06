@@ -49,7 +49,7 @@ Below is a snipper of what the pgAdmin dashboard looks like
 
 Below are the developers of this database:
 
-**[Sammy Elfejji](https://www.github.com/selfejji/)**, selfejji2@student.gsu.edu
-Samuel Cooney, scooney2@student.gsu.edu
+**[Sammy Elfejji](https://www.github.com/selfejji/)**, selfejji2@student.gsu.edu<br>
+Samuel Cooney, scooney2@student.gsu.edu<br>
 Yared Geremew, ygeremew1@student.gsu.edu
 

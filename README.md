@@ -6,9 +6,9 @@ It is the purpose of this database system to provide an efficient, fast, and pra
 
 Visit A Section **bold text**
 
-- [link](#The-Structure-of-the-ICS)
-- [link](#Platforms)
-- [link](#Contributors)
+- [The Structure of the ICS](#The-Structure-of-the-ICS)
+- [Platforms](#Platforms)
+- [Contributors](#Contributors)
 
 ## The structure of the ICS
 

@@ -10,7 +10,7 @@ Visit A Section **bold text**
 - [Platforms](#Platforms)
 - [Contributors](#Contributors)
 
-## The structure of the ICS
+## The Structure of the ICS
 
 Attached is the ER Diagram for our ICS
 

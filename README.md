@@ -41,7 +41,7 @@ status BOOLEAN NOT NULL
 
 The management tool used for the database is **[pgAdmin](https://www.pgadmin.org/)**<br>
 pgAdmin 4 is a graphical user interface (GUI) management tool for postgreSQL databases.<br>
-Below is a snipper of what the pgAdmin dashboard looks like 
+Below is a snippet of what the pgAdmin dashboard looks like 
 
 ![](images/pgAdmin.png?raw=true)
 

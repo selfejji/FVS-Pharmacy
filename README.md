@@ -14,7 +14,7 @@ It is the purpose of this database system to provide an efficient, fast, and pra
 
 Attached is the ER Diagram for our ICS
 
-![](images/FVSDiagram.png?raw=true)
+![](images/FVS_ER_Diagram.png?raw=true)
 
 ## Platforms
 

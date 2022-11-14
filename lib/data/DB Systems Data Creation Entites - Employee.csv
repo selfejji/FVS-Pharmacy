@@ -1,0 +1,101 @@
+eID,firstname,lastname,address,ssn,pos,status,salary
+1,Cassius,Ramos,"1513 Southeast 9th Street, Moore GA 73160",830892343,Store Manager,FALSE,46375
+2,Harper,Levine,"6450 West Bethany Home Road, Glendale GA 85301",837768508,Store Manager,FALSE,42053
+3,Lamont,Roberts,"3951 Kimberly Street, Montgomery GA 36116",442736074,Store Manager,TRUE,42536
+4,Zion,Underwood,"235 Hugh Thomas Drive, Panama City GA 32404",279770234,Store Manager,FALSE,45130
+5,Dillan,Harding,"2632 Jackson Street East, Carson GA 90810",875966056,Store Manager,FALSE,43439
+6,Dashawn,Clark,"700 Towering Oak Court, Glen Burnie GA 21061",219872881,Store Manager,FALSE,44125
+7,Morgan,Braun,"4216 Lorraine Street, Panama City Beach GA 32408",411524164,Store Manager,FALSE,41415
+8,Dylan,Holden,"4216 Lorraine Street, Panama City Beach GA 32408",117786573,Store Manager,FALSE,46875
+9,Junior,Hoover,"172 Alburg Springs Road, Alburgh GA 05440",374544697,Store Manager,FALSE,42322
+10,Mark,Fernandez,"309 Water Street, North Little Rock GA 72117",172500703,Store Manager,FALSE,45023
+11,Tyrone,Boyer,"8505 Waters Avenue, Savannah GA 31406",170755821,Store Manager,FALSE,47564
+12,Caiden,Byrd,"4001 Anderson Road, Nashville GA 37217",387782058,Store Manager,FALSE,42493
+13,Jerimiah,Lara,"9712 Stream View Trail, Louisville GA 40258",180191373,Store Manager,FALSE,45184
+14,Kale,Cameron,"7529 Perryman Court, undefined GA 21226",811459197,Store Manager,FALSE,49021
+15,Titus,Blevins,"184 Oak Street, Foxborough GA 02035",669590583,Store Manager,FALSE,45514
+16,Oscar,White,"130 Carolina Cherry Circle, Pooler GA 31322",805627359,Store Manager,FALSE,43833
+17,Ayaan,Torres,"451 East Street, Huntington GA 05462",745621701,Store Manager,FALSE,42232
+18,Leland,Sexton,"6045 Camelot Court, Montgomery GA 36117",445095510,Shift Lead Supervisor,TRUE,18608
+19,Craig,Rosario,"4201 Georgia Avenue Northwest, Washington GA 20011",668542718,Shift Lead Supervisor,TRUE,15829
+20,Jalen,Murphy,"8001 West 71st Avenue, Arvada GA 80004",668669280,Shift Lead Supervisor,FALSE,19519
+21,Micah,Boyle,"9360 Hester Beasley Road, Nashville GA 37221",499537359,Shift Lead Supervisor,FALSE,17277
+22,Jensen,Bridges,"1831 Frankford Avenue, Panama City GA 32405",223548198,Shift Lead Supervisor,TRUE,17437
+23,Jadiel,Moss,"10 Erick Road, Mansfield GA 02048",859207363,Shift Lead Supervisor,FALSE,15466
+24,Jerome,Bailey,"17722 North 79th Avenue, Glendale GA 85308",526135928,Shift Lead Supervisor,TRUE,16067
+25,Josiah,Bishop,"7717 Everett Street, Arvada GA 80005",995668459,Shift Lead Supervisor,FALSE,15133
+26,Alberto,Madden,"38 Renwick Road, Melrose GA 02176",311334080,Shift Lead Supervisor,FALSE,16240
+27,Asa,Gray,"4604 West 19th Court, Panama City GA 32405",417850405,Shift Lead Supervisor,FALSE,17534
+28,Jair,Santiago,"189 Danforth Street, Framingham GA 01701",661774184,Shift Lead Supervisor,FALSE,19104
+29,Christopher,Fowler,"8070 Holland Court, Arvada GA 80005",313383291,Shift Lead Supervisor,FALSE,16875
+30,Gary,Parks,"25 Edwards Street, Manchester GA 06042",261082229,Shift Lead Supervisor,FALSE,15576
+31,Andreas,Cordova,"8446 Coors Loop, Arvada GA 80005",449928338,Shift Lead Supervisor,FALSE,19982
+32,Randy,Hamilton,"919 Windsor Avenue, Annapolis GA 21403",356401108,Shift Lead Supervisor,FALSE,17003
+33,Carmelo,Walls,"1265 Southeast 23rd Terrace, Georgia City GA 73129",254035585,Shift Lead Supervisor,FALSE,18232
+34,Devan,Zhang,"210 Beachcomber Drive, Pismo Beach GA 93449",801024355,Cashier,FALSE,12851
+35,Hezekiah,Meadows,"1402 Maggies Way, Waterbury Center GA 05677",357041290,Cashier,FALSE,11091
+36,Jaxson,Andrade,"8642 Yule Street, Arvada GA 80007",354573520,Cashier,FALSE,7561
+37,Deandre,Murray,"713 Millard Fuller Drive, Montgomery GA 36110",360498967,Cashier,FALSE,9417
+38,Landon,Bush,"1828 East Parkshore Drive, Fayetteville GA 72703",246895648,Cashier,FALSE,5907
+39,Vincent,Dalton,"5385 Iris Street, Arvada GA 80002",535350735,Cashier,FALSE,10130
+40,Jayvion,Greene,"80 North East Street, Holyoke GA 01040",242701027,Cashier,FALSE,9393
+41,Bailey,Robles,"17 Marina Drive, Savannah GA 31411",909637076,Cashier,FALSE,6783
+42,Ricardo,Chaney,"33300 Mission Boulevard, Union City GA 94587",878924079,Cashier,FALSE,6810
+43,Shawn,Roman,"32532 Jean Drive, Union City GA 94587",450733476,Cashier,FALSE,13032
+44,Connor,Vasquez,"2650 East Huntsville Road, Fayetteville GA 72701",397310152,Cashier,FALSE,12142
+45,Clay,Estrada,"6925 Lariat Lane, Castro Valley GA 94552",335097379,Cashier,FALSE,7299
+46,Solomon,Douglas,"401 Fairhill Court, Annapolis GA 21403",893260805,Cashier,FALSE,9858
+47,Nicolas,Stark,"2613 Cottonwood Street, Anchorage GA 99508",624927039,Cashier,FALSE,9585
+48,Aden,Sellers,"23622 Greatland Drive, Anchorage GA 99567",333555224,Cashier,FALSE,5130
+49,Alvin,Bentley,"3179 18th Street Northwest, Washington GA 20010",812016259,Cashier,TRUE,5129
+50,Ethan,Gonzales,"6120 Southeast 84th Street, Georgia City GA 73135",689204661,Cashier,FALSE,7357
+51,Kristen,Reyes,"6 Sawmill Lane, Westford GA 05494",157478459,Cashier,FALSE,7207
+52,Alina,Freeman,"244 La Normandy Drive, Louisville GA 40223",247769031,Cashier,TRUE,5256
+53,Charlotte,Guzman,"7229 Lewis Place, Anchorage GA 99507",816335888,Cashier,FALSE,14694
+54,Malia,Franco,"2505 Southwest 43rd Street, Oklahoma City GA 73119",436282425,Cashier,FALSE,14367
+55,Eliana,Pitts,"2936 State Avenue, Panama City GA 32405",705915433,Cashier,TRUE,7184
+56,Miranda,Malone,"36 Grove Street, Manchester GA 06042",621161587,Cashier,FALSE,5896
+57,Jennifer,Browning,"8447 West 51st Avenue, Arvada GA 80002",643810789,Cashier,FALSE,14585
+58,Adrianna,Briggs,"20 Hacker Street, Worcester GA 01603",562040533,Pharmacy Manager,TRUE,186271
+59,Zariah,Mejia,"1825 Woodland Farms Court, Nashville GA 37138",579392216,Pharmacy Manager,FALSE,148534
+60,Helena,York,"218 Turtle Cove, Panama City Beach GA 32413",939882897,Pharmacy Manager,FALSE,160145
+61,Kamryn,Frost,"218 Turtle Cove, Panama City Beach GA 32413",267624497,Pharmacy Manager,FALSE,191505
+62,Allie,Mccarthy,"119 Redwood Road, Manchester GA 06040",428418833,Pharmacy Manager,FALSE,132977
+63,Liliana,Duran,"4125 Cobia Street, Panama City GA 32408",281434583,Pharmacy Manager,FALSE,113282
+64,Selina,Herman,"505 Southeast 32nd Street, Oklahoma City GA 73129",166990934,Pharmacy Manager,FALSE,175834
+65,Saige,Giles,"5113 Southeast 51st Street, Oklahoma City GA 73135",167264834,Pharmacy Manager,FALSE,175842
+66,Ryleigh,Reid,"23 Florida Avenue Northeast, Washington GA 20002",163946851,Pharmacy Manager,FALSE,123826
+67,Ruby,Norman,"17109 Guava Avenue, Panama City Beach GA 32413",793832038,Pharmacy Manager,FALSE,183033
+68,Paisley,Mosley,"460 Woodbridge Street, Manchester GA 06042",260877079,Pharmacy Manager,FALSE,155708
+69,Esperanza,Doyle,"6385 Oak Street, Arvada GA 80004",892245708,Pharmacy Manager,FALSE,144217
+70,Gianna,Fitzpatrick,"249 Yellow Leaf Circle, Anchorage GA 99504",359732600,Pharmacy Technician,TRUE,31325
+71,Tamara,Parsons,"4074 North Sunflower Circle, Fayetteville GA 72703",339719202,Pharmacy Technician,FALSE,34173
+72,Haven,Boone,"7506 Harvey Street, Panama City GA 32404",281214906,Pharmacy Technician,TRUE,36262
+73,Alyvia,Carr,"1207 Branch Lane, Glen Burnie GA 21061",863280966,Pharmacy Technician,TRUE,37250
+74,Brielle,Barron,"1207 Branch Lane, Glen Burnie GA 21061",658432120,Pharmacy Technician,FALSE,38147
+75,Dalia,Moyer,"1216 West Hill Street, Louisville GA 40210",107889259,Pharmacy Technician,FALSE,39265
+76,Carolyn,Heath,"10725 Sunset Boulevard, Spencer GA 73084",603700504,Pharmacy Technician,FALSE,36480
+77,Carmen,Krause,"3100 Don Juan Court, Montgomery GA 36110",663347761,Pharmacy Technician,TRUE,37113
+78,Adriana,Herrera,"407 West Hillwood Drive, Nashville GA 37205",762537219,Pharmacy Technician,FALSE,33716
+79,Kaylyn,Burns,"407 West Hillwood Drive, Nashville GA 37205",931898525,Pharmacy Technician,FALSE,30321
+80,Elena,Day,"98 Lincoln Street, Revere GA 02151",994271485,Pharmacy Technician,FALSE,38403
+81,Shirley,Holder,"17433 Teklanika Drive, Anchorage GA 99577",228044853,Pharmacy Technician,FALSE,34612
+82,Aylin,Patterson,"900 North Leverett Avenue, Fayetteville GA 72701",792804206,Pharmacy Technician,FALSE,33272
+83,Gabrielle,Novak,"601 Farragut Place Northeast, Washington GA 20017",509589937,Pharmacy Technician,FALSE,39562
+84,Amanda,Guerra,"3620 Colmar Drive, Louisville GA 40211",907710182,Pharmacy Technician,FALSE,32075
+85,Annabelle,Wood,"5620 Lilly Street, Panama City GA 32404",456920281,Pharmacy Technician,FALSE,30032
+86,Araceli,Willis,"45430 Lauri Lane, Oakhurst GA 93644",482251352,Pharmacy Technician,FALSE,35138
+87,Alyson,Sharp,"517 Copperfield Way, Brentwood GA 37027",664158791,Pharmacy Technician,FALSE,31581
+88,Quinn,Bender,"2829 31st Street Northwest, Washington GA 20008",716963311,Pharmacy Technician,FALSE,30514
+89,Sofia,Mccoy,"3 Southerberry Drive, undefined GA 05468",414428454,Pharmacy Technician,TRUE,38947
+90,Denise,Levy,"1559 Alabama Avenue Southeast, Washington GA 20032",351875805,Pharmacy Technician,FALSE,31744
+91,Finley,Juarez,"3820 North Peniel Avenue, Bethany GA 73008",438973091,Pharmacy Technician,FALSE,37196
+92,Lillianna,Chung,"91 Rushforde Drive, Manchester GA 06040",739108720,Pharmacy Technician,FALSE,35284
+93,Mylie,Olsen,"3959 Fairlands Drive, Pleasanton GA 94588",102649666,Pharmacy Technician,FALSE,30702
+94,Cloe,Aguilar,"2246 West Fairview Avenue, Montgomery GA 36108",573739504,Pharmacy Crossover,FALSE,37520
+95,Natasha,Bullock,"8293 Grayson Grove, Montgomery GA 36117",693969801,Pharmacy Crossover,FALSE,31903
+96,Adrienne,Shepard,"1452 55th Avenue, Oakland GA 94621",781977725,Pharmacy Crossover,TRUE,38871
+97,Kaya,Stanley,"1357 Addison Street, Berkeley GA 94702",325170521,Pharmacy Crossover,FALSE,30961
+98,Isabelle,Choi,"3704 Hughes Road, Louisville GA 40207",373775171,Pharmacy Crossover,FALSE,37990
+99,Jaliyah,Griffin,"517 Retford Drive, Severna Park GA 21146",543543533,Pharmacy Crossover,FALSE,38060
+100,Janiah,Johnson,"517 Copperfield Way, Brentwood GA 37027",424562567,Pharmacy Crossover,FALSE,42678

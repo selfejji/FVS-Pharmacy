@@ -168,35 +168,35 @@ CREATE TABLE IF NOT EXISTS NonOTCOperations (
 
 CREATE TABLE IF NOT EXISTS PrescriptionPrice (
    upcP BIGINT NOT NULL,
-   upcOp BIGINT NOT NULL,
+   upc BIGINT NOT NULL,
    dateUpdated TIMESTAMP NOT NULL,
-   PRIMARY KEY (upcP, upcOp),
+   PRIMARY KEY (upcP, upc),
    FOREIGN KEY (upcP)
       REFERENCES Prescriptions (upcP),
-   FOREIGN KEY (upcOp)
-      REFERENCES Operations (upcOp)
+   FOREIGN KEY (upc)
+      REFERENCES Price (upc)
 );
 
 CREATE TABLE IF NOT EXISTS OTCPrice (
    upcO BIGINT NOT NULL,
-   upcOp BIGINT NOT NULL,
+   upc BIGINT NOT NULL,
    dateUpdated TIMESTAMP NOT NULL,
-   PRIMARY KEY (upcO, upcOp),
+   PRIMARY KEY (upcO, upc),
    FOREIGN KEY (upcO)
       REFERENCES OTC (upcO),
-   FOREIGN KEY (upcOp)
-      REFERENCES Operations (upcOp)
+   FOREIGN KEY (upc)
+      REFERENCES Price (upc)
 );
 
 CREATE TABLE IF NOT EXISTS NonOTCPrice (
    upcN BIGINT NOT NULL,
-   upcOp BIGINT NOT NULL,
+   upc BIGINT NOT NULL,
    dateUpdated TIMESTAMP NOT NULL,
-   PRIMARY KEY (upcN, upcOp),
+   PRIMARY KEY (upcN, upc),
    FOREIGN KEY (upcN)
       REFERENCES NonOTC (upcN),
-   FOREIGN KEY (upcOp)
-      REFERENCES Operations (upcOp)
+   FOREIGN KEY (upc)
+      REFERENCES Price (upc)
 );
 
 /******Data Insertion VIA CSV******/

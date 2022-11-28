@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+{% for table in data %}
+<a href="{{ url_for('report', table=table[0]) }}">{{ table[0] }}</a>
+    <br>
+{%  endfor %}
+</div>
+</body>
+</html>

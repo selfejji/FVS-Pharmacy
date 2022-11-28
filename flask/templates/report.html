@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<tr>
+    {% for header in headers %}
+        <th>
+            {{ header[0] }}
+        </th>
+    {% endfor %}
+</tr>
+{% for col in data %}
+    <tr>
+{% for entity in col %}
+    <td>
+{{ entity }}
+    </td>
+{% endfor %}
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>

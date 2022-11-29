@@ -10,7 +10,15 @@
     <tr>
         {% for header in headers %}
             <th>
-                <a href="{{ url_for('report', table=table, page=page, sortby=header[0]) }}">{{ header[0] }}</a>
+            {% if sortby == header[0] %}
+                {% if order == "ASC" %}
+                    <a href="{{ url_for('report', table=table, page=page, sortby=header[0], order='DESC') }}">{{ header[0] }}</a>
+                {% else %}
+                    <a href="{{ url_for('report', table=table, page=page, sortby=header[0], order='ASC') }}">{{ header[0] }}</a>
+                {% endif %}
+            {% else %}
+                <a href="{{ url_for('report', table=table, page=page, sortby=header[0], order='ASC') }}">{{ header[0] }}</a>
+            {% endif %}
             </th>
         {% endfor %}
     </tr>
@@ -25,9 +33,9 @@
     {% endfor %}
 </table>
 {% for i in range(1, pages) %}
-    <a href="{{ url_for('report', table=table, page=i, sortby='default') }}">Page {{ i }}</a>
+    <a href="{{ url_for('report', table=table, page=i, sortby=sortby, order=order) }}">Page {{ i }}</a>
 {% endfor %}
-<form action="{{ url_for('report', table=table, page=page, sortby='default') }}" method="post">
+<form action="{{ url_for('report', table=table, page=page, sortby=sortby, order=order) }}" method="post">
     {% for arg in headers %}
         {{ arg[0] }}: <input name="{{ arg[0] }}" type="text">
     {% endfor %}

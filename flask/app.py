@@ -35,8 +35,8 @@ def hello_world():  # put application's code here
     return render_template("index.html", data=cur.fetchall())
 
 
-@app.route("/report/<table>/<page>/<sortby>", methods=["POST", "GET"])
-def report(table, page, sortby):
+@app.route("/report/<table>/<page>/<sortby>/<order>", methods=["POST", "GET"])
+def report(table, page, sortby, order):
     if request.method == "POST":
         try:
             result = request.form.to_dict(flat=True)
@@ -51,15 +51,13 @@ def report(table, page, sortby):
         if sortby == 'default':
             cur.execute("SELECT * FROM %s" % table)
         else:
-            cur.execute("SELECT * FROM %s ORDER BY %s" % (table, sortby))
+            cur.execute("SELECT * FROM %s ORDER BY %s %s" % (table, sortby, order))
         data = cur.fetchall()
         cur.execute("SELECT column_name FROM information_schema.columns WHERE table_name = %s ORDER BY ordinal_position ", (table,))
         headers = cur.fetchall()
         pages = ceil(len(data) / 20)+1
         data = data[(int(page)-1)*20:int(page)*20]
-        print(data)
-        print(headers)
-    return render_template("report.html", data=data, headers=headers, pages=pages, page=page, table=table)
+    return render_template("report.html", data=data, headers=headers, pages=pages, page=page, table=table, sortby=sortby, order=order)
 
 
 if __name__ == '__main__':

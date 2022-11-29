@@ -7,7 +7,7 @@
 <body>
 <div style="text-align: center">
 {% for table in data %}
-<a href="{{ url_for('report', table=table[0], page=1) }}">{{ table[0] }}</a>
+<a href="{{ url_for('report', table=table[0], page=1, sortby='default') }}">{{ table[0] }}</a>
     <br>
 {%  endfor %}
 </div>

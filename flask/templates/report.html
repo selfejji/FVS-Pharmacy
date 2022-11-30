@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <title>{{ page }} Report</title>
 </head>
 <body>
-<h1 style="text-align: center">{{ table }}</h1>
-<table>
-    <tr>
+<div>
+    <a href="{{ url_for('index') }}">
+    <button type="submit" class="ui large left floated icon button">
+    <i class="home icon"></i>
+    </button>
+    </a>
+<div class="ui huge center aligned header">{{ table }}</div>
+</div>
+<table class="ui celled padded table">
+    <thead>
         {% for header in headers %}
-            <th>
+            <th class="single line">
             {% if sortby == header[0] %}
                 {% if order == "ASC" %}
                     <a href="{{ url_for('report', table=table, page=page, sortby=header[0], order='DESC') }}">{{ header[0] }}</a>
@@ -21,7 +29,8 @@
             {% endif %}
             </th>
         {% endfor %}
-    </tr>
+    </thead>
+    <tbody>
     {% for row in data %}
         <tr>
             {% for entity in row %}
@@ -31,16 +40,38 @@
             {% endfor %}
         </tr>
     {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr><th colspan="{{ headers|length }}">
+            <div class="ui right floated pagination menu">
+                {% for i in range(1, pages) %}
+                    <a class="item" href="{{ url_for('report', table=table, page=i, sortby=sortby, order=order) }}">Page {{ i }}</a>
+                {% endfor %}
+            </div>
+        </th></tr>
+    </tfoot>
 </table>
-{% for i in range(1, pages) %}
-    <a href="{{ url_for('report', table=table, page=i, sortby=sortby, order=order) }}">Page {{ i }}</a>
-{% endfor %}
+
 <form action="{{ url_for('report', table=table, page=page, sortby=sortby, order=order) }}" method="post">
+    <div class="ui form" style="padding-left: 10px; padding-right: 10px;">
+    <div class="fields">
     {% for arg in headers %}
-        {{ arg[0] }}: <input name="{{ arg[0] }}" type="text">
+        <div class="field">
+        <label>{{ arg[0] }}</label>
+        <input name="{{ arg[0] }}" type="text" placeholder="{{ arg[0] }}">
+        </div>
     {% endfor %}
-    <input type="submit" value="submit">
+        <button class="ui button" type="submit">Submit</button>
+    </div>
+    </div>
 </form>
 
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+{% endwith %}
 </body>
 </html>

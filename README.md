@@ -52,4 +52,4 @@ Below are the developers of this database:
 **[Sammy Elfejji](https://www.github.com/selfejji/)**, selfejji2@student.gsu.edu<br>
 Samuel Cooney, scooney2@student.gsu.edu<br>
 Yared Geremew, ygeremew1@student.gsu.edu
-
+Jamil Morris, Jmorris104@student.Gsu.edu

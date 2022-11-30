@@ -9,6 +9,7 @@ It is the purpose of this database system to provide an efficient, fast, and pra
 - [The Structure of the ICS](#The-Structure-of-the-ICS)
 - [Platforms](#Platforms)
 - [Contributors](#Contributors)
+- [How To Run](#How-To-Run)
 
 ## The Structure of the ICS
 
@@ -44,6 +45,44 @@ pgAdmin 4 is a graphical user interface (GUI) management tool for postgreSQL dat
 Below is a snippet of what the pgAdmin dashboard looks like 
 
 ![](images/pgAdmin.png?raw=true)
+
+## How To Run
+
+Below are instructions on how to run the web ui:
+
+1. Clone the project using command 
+```bash 
+git clone https://github.com/selfejji/Fake-Value-Store-Inventory-Control-System.git
+```
+
+2. Navigate into the flask folder in the project folder<br>
+
+3. Run command to install all the libraries used by this project
+```bash
+pip install -r requirements.txt
+```
+ 
+4. Create a file: database.ini and put the following in it:
+```bash
+[postgresql]
+host=localhost
+database=DATABASE_NAME
+user=USER_NAME
+password=YOUR_PASSWORD
+```
+
+5. Create a file: flask.ini and put the following in it:
+```bash
+[flask]
+secret_key=PUT_RANDOM_KEY_HERE
+```
+
+6. Run development server by using command 
+```bash
+python app.py
+```
+7. Copy the address flask says it is running on and paste into your browser.
+
 
 ## Contributors
 

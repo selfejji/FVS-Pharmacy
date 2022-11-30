@@ -5,7 +5,7 @@
 -- Dumped from database version 15.0
 -- Dumped by pg_dump version 15.0
 
--- Started on 2022-11-14 01:32:18 EST
+-- Started on 2022-11-29 23:45:13 EST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -340,13 +340,13 @@ CREATE TABLE public.nonotcoperations (
 ALTER TABLE public.nonotcoperations OWNER TO postgres;
 
 --
--- TOC entry 249 (class 1259 OID 16707)
+-- TOC entry 249 (class 1259 OID 16754)
 -- Name: nonotcprice; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.nonotcprice (
     upcn bigint NOT NULL,
-    upcop bigint NOT NULL,
+    upc bigint NOT NULL,
     dateupdated timestamp without time zone NOT NULL
 );
 
@@ -437,13 +437,13 @@ CREATE TABLE public.otcoperations (
 ALTER TABLE public.otcoperations OWNER TO postgres;
 
 --
--- TOC entry 248 (class 1259 OID 16692)
+-- TOC entry 248 (class 1259 OID 16739)
 -- Name: otcprice; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.otcprice (
     upco bigint NOT NULL,
-    upcop bigint NOT NULL,
+    upc bigint NOT NULL,
     dateupdated timestamp without time zone NOT NULL
 );
 
@@ -529,13 +529,13 @@ CREATE TABLE public.prescriptionoperations (
 ALTER TABLE public.prescriptionoperations OWNER TO postgres;
 
 --
--- TOC entry 247 (class 1259 OID 16677)
+-- TOC entry 247 (class 1259 OID 16724)
 -- Name: prescriptionprice; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.prescriptionprice (
     upcp bigint NOT NULL,
-    upcop bigint NOT NULL,
+    upc bigint NOT NULL,
     dateupdated timestamp without time zone NOT NULL
 );
 
@@ -884,12 +884,12 @@ ALTER TABLE ONLY public.nonotcoperations
 
 
 --
--- TOC entry 3589 (class 2606 OID 16711)
+-- TOC entry 3589 (class 2606 OID 16758)
 -- Name: nonotcprice nonotcprice_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.nonotcprice
-    ADD CONSTRAINT nonotcprice_pkey PRIMARY KEY (upcn, upcop);
+    ADD CONSTRAINT nonotcprice_pkey PRIMARY KEY (upcn, upc);
 
 
 --
@@ -929,12 +929,12 @@ ALTER TABLE ONLY public.otcoperations
 
 
 --
--- TOC entry 3587 (class 2606 OID 16696)
+-- TOC entry 3587 (class 2606 OID 16743)
 -- Name: otcprice otcprice_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.otcprice
-    ADD CONSTRAINT otcprice_pkey PRIMARY KEY (upco, upcop);
+    ADD CONSTRAINT otcprice_pkey PRIMARY KEY (upco, upc);
 
 
 --
@@ -956,12 +956,12 @@ ALTER TABLE ONLY public.prescriptionoperations
 
 
 --
--- TOC entry 3585 (class 2606 OID 16681)
+-- TOC entry 3585 (class 2606 OID 16728)
 -- Name: prescriptionprice prescriptionprice_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.prescriptionprice
-    ADD CONSTRAINT prescriptionprice_pkey PRIMARY KEY (upcp, upcop);
+    ADD CONSTRAINT prescriptionprice_pkey PRIMARY KEY (upcp, upc);
 
 
 --
@@ -1037,21 +1037,21 @@ ALTER TABLE ONLY public.nonotcoperations
 
 
 --
--- TOC entry 3610 (class 2606 OID 16712)
+-- TOC entry 3610 (class 2606 OID 16764)
+-- Name: nonotcprice nonotcprice_upc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.nonotcprice
+    ADD CONSTRAINT nonotcprice_upc_fkey FOREIGN KEY (upc) REFERENCES public.price(upc);
+
+
+--
+-- TOC entry 3611 (class 2606 OID 16759)
 -- Name: nonotcprice nonotcprice_upcn_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.nonotcprice
     ADD CONSTRAINT nonotcprice_upcn_fkey FOREIGN KEY (upcn) REFERENCES public.nonotc(upcn);
-
-
---
--- TOC entry 3611 (class 2606 OID 16717)
--- Name: nonotcprice nonotcprice_upcop_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.nonotcprice
-    ADD CONSTRAINT nonotcprice_upcop_fkey FOREIGN KEY (upcop) REFERENCES public.operations(upcop);
 
 
 --
@@ -1091,21 +1091,21 @@ ALTER TABLE ONLY public.otcoperations
 
 
 --
--- TOC entry 3608 (class 2606 OID 16697)
+-- TOC entry 3608 (class 2606 OID 16749)
+-- Name: otcprice otcprice_upc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.otcprice
+    ADD CONSTRAINT otcprice_upc_fkey FOREIGN KEY (upc) REFERENCES public.price(upc);
+
+
+--
+-- TOC entry 3609 (class 2606 OID 16744)
 -- Name: otcprice otcprice_upco_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.otcprice
     ADD CONSTRAINT otcprice_upco_fkey FOREIGN KEY (upco) REFERENCES public.otc(upco);
-
-
---
--- TOC entry 3609 (class 2606 OID 16702)
--- Name: otcprice otcprice_upcop_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.otcprice
-    ADD CONSTRAINT otcprice_upcop_fkey FOREIGN KEY (upcop) REFERENCES public.operations(upcop);
 
 
 --
@@ -1145,16 +1145,16 @@ ALTER TABLE ONLY public.prescriptionoperations
 
 
 --
--- TOC entry 3606 (class 2606 OID 16687)
--- Name: prescriptionprice prescriptionprice_upcop_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 3606 (class 2606 OID 16734)
+-- Name: prescriptionprice prescriptionprice_upc_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.prescriptionprice
-    ADD CONSTRAINT prescriptionprice_upcop_fkey FOREIGN KEY (upcop) REFERENCES public.operations(upcop);
+    ADD CONSTRAINT prescriptionprice_upc_fkey FOREIGN KEY (upc) REFERENCES public.price(upc);
 
 
 --
--- TOC entry 3607 (class 2606 OID 16682)
+-- TOC entry 3607 (class 2606 OID 16729)
 -- Name: prescriptionprice prescriptionprice_upcp_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1198,7 +1198,7 @@ ALTER TABLE ONLY public.verifysimprest
     ADD CONSTRAINT verifysimprest_impid_fkey FOREIGN KEY (impid) REFERENCES public.imprestverif(impid);
 
 
--- Completed on 2022-11-14 01:32:19 EST
+-- Completed on 2022-11-29 23:45:13 EST
 
 --
 -- PostgreSQL database dump complete

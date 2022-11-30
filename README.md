@@ -56,6 +56,9 @@ git clone https://github.com/selfejji/Fake-Value-Store-Inventory-Control-System.
 ```
 
 2. Navigate into the flask folder in the project folder<br>
+```bash
+cd flash
+```
 
 3. Run command to install all the libraries used by this project
 ```bash

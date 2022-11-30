@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="ui huge center aligned header">FVS Inventory Control System</div>
+<div class="ui large link list" style="text-align: center">
+{% for table in tables %}
+<a class="item" href="{{ url_for('report', table=table[0], page=1, sortby='default', order='ASC') }}">{{ table[0] }}</a>
+{%  endfor %}
+</div>
+<h2 class="ui horizontal divider header">Example Queries:</h2>
+<div class="ui grid">
+    <div class="five wide column">
+        <div class="ui large center aligned header">Query 1 - Samuel Cooney</div>
+        <br>
+        <p style="text-align: center;">Find all the Pharmacy Managers who updated the BOH of all prescriptions by more than 3 after February.</p>
+        <br>
+        <p style="text-align: center">SELECT e.eid, e.firstname, p.prescriptionName, o.boh, ops.dateOperated FROM Employee as e INNER JOIN Operates as ops ON e.eid = ops.eid INNER JOIN Operations as o ON ops.upcOp = o.upcop INNER JOIN PrescriptionOperations as pops ON o.upcop= pops.upcop INNER JOIN Prescriptions as p ON pops.upcop = p.upcp WHERE e.pos = 'Pharmacy Manager' AND o.boh >=3 AND ops.dateOperated > '03-01-22 00:00:00' ORDER BY ops.dateOperated</p>
+    </div>
+    <div class="eleven wide column">
+        <table class="ui celled padded table">
+            <thead>
+                {% for header in q1h %}
+                    <th class="single line">
+                        {{ header[0] }}
+                    </th>
+                {% endfor %}
+            </thead>
+            <tbody>
+                {% for row in q1 %}
+                    <tr>
+                        {% for entity in row %}
+                            <td>
+                                {{ entity }}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="ui grid">
+    <div class="five wide column">
+        <div class="ui large center aligned header">Query 2 - Jamil Morris</div>
+        <br>
+        <p style="text-align: center;">What are all the OTC products that have a shelf capacity of 3, but a BOH of greater than 3?</p>
+        <br>
+        <p style="text-align: center">SELECT o.otcID, o.otcName, op.boh, op.shelfCap FROM Operations as op INNER JOIN OTC as o ON op.upcOp = o.upco WHERE op.boh > 3 AND op.shelfCap = 3 ORDER BY o.otcID</p>
+    </div>
+    <div class="eleven wide column">
+        <table class="ui celled padded table">
+            <thead>
+                {% for header in q2h %}
+                    <th class="single line">
+                        {{ header[0] }}
+                    </th>
+                {% endfor %}
+            </thead>
+            <tbody>
+                {% for row in q2 %}
+                    <tr>
+                        {% for entity in row %}
+                            <td>
+                                {{ entity }}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="ui grid">
+    <div class="five wide column">
+        <div class="ui large center aligned header">Query 3 - Yared Geremew</div>
+        <br>
+        <p style="text-align: center;">Find the employees, active and inactive, who recorded a drawer overage more than 10 dollars after the month August and sort by overage amount in descending order.</p>
+        <br>
+        <p style="text-align: center">select employee.firstname, employee.lastname, drawerverif.overshort, verifysdrawer.dateverifieddrawer from employee join verifysdrawer on employee.eid = verifysdrawer.eid join drawerverif on drawerverif.verifid = verifysdrawer.verifid where overshort > '10' and extract(month from dateverifieddrawer) > '03' order by overshort desc</p>
+    </div>
+    <div class="eleven wide column">
+        <table class="ui celled padded table">
+            <thead>
+                {% for header in q3h %}
+                    <th class="single line">
+                        {{ header[0] }}
+                    </th>
+                {% endfor %}
+            </thead>
+            <tbody>
+                {% for row in q3 %}
+                    <tr>
+                        {% for entity in row %}
+                            <td>
+                                {{ entity }}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="ui grid">
+    <div class="five wide column">
+        <div class="ui large center aligned header">Query 4 - Sammy Elfejji</div>
+        <br>
+        <p style="text-align: center;">Find the number of Prescriptions, OTC, and Non-OTC products that have a retail price higher than 150, 15, and 5 dollars respectively and had price adjustments between the dates of January 3rd and November 14th.</p>
+        <br>
+        <p style="text-align: center">SELECT COUNT(*) as prescriptionsCount, (SELECT COUNT(*) as otcCount FROM OTC as o INNER JOIN OTCPrice as oP ON o.upco=oP.upco INNER JOIN Price as p ON OP.upco = p.upc WHERE p.retailP > 15 AND oP.dateUpdated BETWEEN '01-03-2022 00:00:00' AND '11-14-2022 00:00:00'), (SELECT COUNT(*) as nonOTCCount FROM NonOTC as n INNER JOIN NonOTCPrice as nP ON n.upcN= nP.upcN INNER JOIN Price as p ON nP.upcN = p.upc WHERE p.retailP > 5 AND nP.dateUpdated BETWEEN '01-03-2022 00:00:00' AND '11-14-2022 00:00:00') FROM Prescriptions as pr INNER JOIN PrescriptionPrice as prP ON pr.upcP = prP.upcP INNER JOIN Price as p ON prP.upcP = p.upc WHERE p.retailP > 150 AND prP.dateUpdated BETWEEN '01-03-2022 00:00:00' AND '11-14-2022 00:00:00'</p>
+    </div>
+    <div class="eleven wide column">
+        <table class="ui celled padded table">
+            <thead>
+                {% for header in q4h %}
+                    <th class="single line">
+                        {{ header[0] }}
+                    </th>
+                {% endfor %}
+            </thead>
+            <tbody>
+                {% for row in q4 %}
+                    <tr>
+                        {% for entity in row %}
+                            <td>
+                                {{ entity }}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

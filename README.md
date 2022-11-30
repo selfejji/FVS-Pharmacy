@@ -8,8 +8,8 @@ It is the purpose of this database system to provide an efficient, fast, and pra
 
 - [The Structure of the ICS](#The-Structure-of-the-ICS)
 - [Platforms](#Platforms)
-- [Contributors](#Contributors)
 - [How To Run](#How-To-Run)
+- [Contributors](#Contributors)
 
 ## The Structure of the ICS
 

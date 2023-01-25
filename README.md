@@ -1,19 +1,19 @@
-# The FVS ICS
+# The FVS Pharmacy RDBMS
 
-FVS ICS is an inventory control system designed to efficiently model day to day operations of FVS Pharmacy stores.<br>
+FVS RDBMS is an inventory control system designed to efficiently model day to day operations of FVS Pharmacy stores.<br>
 Before the ICS, all FVS Pharmacys had inefficient database structures that do not properly model the operations of the store.<br>
 It is the purpose of this database system to provide an efficient, fast, and practical model for individual FVS Pharamcys.
 
 **Visit A Section**
 
-- [The Structure of the ICS](#The-Structure-of-the-ICS)
+- [The Structure of the RDBMS](#The-Structure-of-the-RDBMS)
 - [Platforms](#Platforms)
 - [How To Run](#How-To-Run)
 - [Contributors](#Contributors)
 
-## The Structure of the ICS
+## The Structure of the RDBMS
 
-Attached is the ER Diagram for our ICS
+Attached is the ER Diagram for our RDBMS
 
 ![](images/FVS_Pharmacy_Diagram.png?raw=true)
 

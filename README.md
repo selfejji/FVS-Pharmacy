@@ -1,4 +1,4 @@
-# The FVS Pharmacy RDBMS
+# FVS Pharmacy 
 
 FVS RDBMS is an inventory control system designed to efficiently model day to day operations of FVS Pharmacy stores.<br>
 Before the ICS, all FVS Pharmacys had inefficient database structures that do not properly model the operations of the store.<br>
